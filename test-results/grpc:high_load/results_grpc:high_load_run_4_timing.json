@@ -1,0 +1,9 @@
+{
+    "test_name": "grpc:high_load",
+    "run_number": 4,
+    "start_time": "2025-08-09 12:11:45",
+    "end_time": "2025-08-09 12:17:48",
+    "start_timestamp": 1754752305,
+    "end_timestamp": 1754752668,
+    "duration_seconds": 363
+}

@@ -1,0 +1,30 @@
+{
+    "Label": "TaskCpuUtilization",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T14:06:00+00:00",
+            "Maximum": 8.846780805538097,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T14:07:00+00:00",
+            "Maximum": 8.658686353514593,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T14:08:00+00:00",
+            "Maximum": 8.048432757457098,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T14:04:00+00:00",
+            "Maximum": 6.300899663319188,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T14:05:00+00:00",
+            "Maximum": 7.842321887612343,
+            "Unit": "Percent"
+        }
+    ]
+}

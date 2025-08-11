@@ -1,0 +1,136 @@
+{
+  "options": {
+    "noColor": false,
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)",
+      "p(99)"
+    ],
+    "summaryTimeUnit": "ms"
+  },
+  "state": {
+    "isStdOutTTY": true,
+    "isStdErrTTY": true,
+    "testRunDurationMs": 208694.089
+  },
+  "metrics": {
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1000,
+        "min": 1000,
+        "max": 1000
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 9968345,
+        "rate": 47765.34423071273
+      }
+    },
+    "data_received": {
+      "contains": "data",
+      "values": {
+        "count": 12811590,
+        "rate": 61389.32856886043
+      },
+      "type": "counter"
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 6755,
+        "rate": 32.36795077602797
+      }
+    },
+    "checks": {
+      "values": {
+        "rate": 1,
+        "passes": 13530,
+        "fails": 0
+      },
+      "thresholds": {
+        "rate>0.99": {
+          "ok": true
+        }
+      },
+      "type": "rate",
+      "contains": "default"
+    },
+    "grpc_req_duration": {
+      "thresholds": {
+        "p(95)<12000": {
+          "ok": true
+        }
+      },
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 1058.320959,
+        "med": 4909.683458,
+        "max": 14305.922708,
+        "p(90)": 8701.7082584,
+        "p(95)": 9815.6634582,
+        "p(99)": 11783.47698876,
+        "avg": 5000.989875732755
+      }
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 70514.285958,
+        "p(90)": 35274.5550584,
+        "p(95)": 42986.6010208,
+        "p(99)": 47607.9514375,
+        "avg": 14710.000529864676,
+        "min": 2380.236,
+        "med": 9712.100666
+      },
+      "thresholds": {
+        "p(95)<10000": {
+          "ok": false
+        }
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 1000
+      }
+    }
+  },
+  "root_group": {
+    "groups": [],
+    "checks": [
+        {
+          "name": "status OK",
+          "path": "::status OK",
+          "id": "8f59c0efd244e6b5c27a2bbb17f839cf",
+          "passes": 6765,
+          "fails": 0
+        },
+        {
+          "name": "response validation",
+          "path": "::response validation",
+          "id": "deb173485c7c050ac419c3785ea9df54",
+          "passes": 6765,
+          "fails": 0
+        }
+      ],
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e"
+  }
+}

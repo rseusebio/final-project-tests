@@ -1,0 +1,20 @@
+{
+    "Label": "TaskMemoryUtilization",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T16:05:00+00:00",
+            "Maximum": 13.8671875,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T16:06:00+00:00",
+            "Maximum": 16.796875,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T16:04:00+00:00",
+            "Maximum": 12.890625,
+            "Unit": "Percent"
+        }
+    ]
+}

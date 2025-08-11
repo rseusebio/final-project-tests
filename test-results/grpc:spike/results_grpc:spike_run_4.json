@@ -1,0 +1,136 @@
+{
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+        {
+          "name": "status OK",
+          "path": "::status OK",
+          "id": "8f59c0efd244e6b5c27a2bbb17f839cf",
+          "passes": 7363,
+          "fails": 0
+        },
+        {
+          "id": "deb173485c7c050ac419c3785ea9df54",
+          "passes": 7363,
+          "fails": 0,
+          "name": "response validation",
+          "path": "::response validation"
+        }
+      ]
+  },
+  "options": {
+    "summaryTimeUnit": "ms",
+    "noColor": false,
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)",
+      "p(99)"
+    ]
+  },
+  "state": {
+    "isStdOutTTY": true,
+    "isStdErrTTY": true,
+    "testRunDurationMs": 181915.361
+  },
+  "metrics": {
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 13334.877594496176,
+        "min": 2304.426875,
+        "med": 9609.790416,
+        "max": 61201.546709,
+        "p(90)": 30181.4489166,
+        "p(95)": 35011.144174700006,
+        "p(99)": 49503.22886008
+      },
+      "thresholds": {
+        "p(95)<10000": {
+          "ok": false
+        }
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "max": 1000,
+        "value": 6,
+        "min": 6
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "min": 1000,
+        "max": 1000,
+        "value": 1000
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 10784072,
+        "rate": 59280.711319370115
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 13953285,
+        "rate": 76702.07135504077
+      }
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 7363,
+        "rate": 40.474866770596684
+      }
+    },
+    "checks": {
+      "thresholds": {
+        "rate>0.99": {
+          "ok": true
+        }
+      },
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 14726
+      }
+    },
+    "grpc_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 5605.819709969705,
+        "min": 1010.479708,
+        "med": 5691.19275,
+        "max": 10510.761958,
+        "p(90)": 8359.82320020001,
+        "p(95)": 8799.1989167,
+        "p(99)": 9884.886975
+      },
+      "thresholds": {
+        "p(95)<12000": {
+          "ok": true
+        }
+      }
+    }
+  }
+}

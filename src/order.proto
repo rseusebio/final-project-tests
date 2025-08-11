@@ -1,0 +1,329 @@
+syntax = "proto3";
+
+package order;
+
+service OrderService {
+  rpc createOrder(CreateOrderRequest) returns (CreateOrderResponse);
+}
+
+message CreateOrderRequest {
+  string requestId = 1;
+  int32 customerId = 2;
+  OrderDetails orderDetails = 3;
+  repeated Product products = 4;
+  PaymentMethod paymentMethod = 5;
+  Address shippingAddress = 6;
+  CustomerDetails customerDetails = 7;
+  optional ClientMetadata clientMetadata = 8;
+  optional Options options = 9;
+  optional Audit audit = 10;
+  optional bool fake = 11;
+}
+
+message OrderDetails {
+  string orderId = 1;
+  string channel = 2;
+  string cartId = 3;
+  string sessionId = 4;
+  repeated string promotionCodes = 5;
+  string currency = 6;
+  string timestamp = 7;
+}
+
+message Product {
+  string productId = 1;
+  string sku = 2;
+  int32 quantity = 3;
+  ProductAttributes attributes = 4;
+  ProductPricing pricing = 5;
+  optional ProductCustomization customization = 6;
+  ProductFulfillment fulfillment = 7;
+  optional ProductRestrictions restrictions = 8;
+}
+
+message ProductAttributes {
+  string color = 1;
+  string size = 2;
+  string variantId = 3;
+  string material = 4;
+  double weight = 5;
+  Dimensions dimensions = 6;
+}
+
+message Dimensions {
+  double lengthCm = 1;
+  double widthCm = 2;
+  double heightCm = 3;
+}
+
+message ProductPricing {
+  double unitPrice = 1;
+  double discountApplied = 2;
+  optional string promotionCode = 3;
+}
+
+message ProductCustomization {
+  optional string engraving = 1;
+  bool giftWrap = 2;
+}
+
+message ProductFulfillment {
+  string type = 1;
+  optional string warehouseId = 2;
+  optional string expectedDeliveryDate = 3;
+  optional string pickupLocationId = 4;
+}
+
+message ProductRestrictions {
+  int32 maxQuantityPerOrder = 1;
+  bool requiresAgeVerification = 2;
+  bool hazardousMaterial = 3;
+}
+
+message PaymentMethod {
+  string paymentMethodId = 1;
+  string type = 2;
+  string token = 3;
+  string lastFour = 4;
+  string brand = 5;
+  string expirationDate = 6;
+  string cvv = 7;
+  string cardholderName = 8;
+  Address billingAddress = 9;
+}
+
+message Address {
+  string addressId = 1;
+  optional string addressType = 2;
+  string street = 3;
+  string city = 4;
+  string state = 5;
+  string country = 6;
+  string postalCode = 7;
+  optional string deliveryInstructions = 8;
+  optional Coordinates coordinates = 9;
+}
+
+message Coordinates {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message CustomerDetails {
+  string email = 1;
+  string phone = 2;
+  optional LoyaltyProgram loyaltyProgram = 3;
+}
+
+message LoyaltyProgram {
+  string memberId = 1;
+  string tier = 2;
+}
+
+message ClientMetadata {
+  string deviceId = 1;
+  string ipAddress = 2;
+  string userAgent = 3;
+  string browserLanguage = 4;
+  string timezone = 5;
+}
+
+message Options {
+  bool validateStock = 1;
+  bool validatePayment = 2;
+  bool reserveStock = 3;
+  bool allowPartialFulfillment = 4;
+  bool notifyOnSuccess = 5;
+  int32 maxResponseTimeMs = 6;
+}
+
+message Audit {
+  string initiatedBy = 1;
+  string initiatorId = 2;
+  string operationReference = 3;
+}
+
+message CreateOrderResponse {
+  string status = 1;
+  string message = 2;
+  Order order = 3;
+  repeated string errors = 4;
+  Metadata metadata = 5;
+}
+
+message Order {
+  string id = 1;
+  string customerId = 2;
+  double totalAmount = 3;
+  string currency = 4;
+  string status = 5;
+  string createdAt = 6;
+  string updatedAt = 7;
+  repeated OrderProduct products = 8;
+  PaymentDetails paymentDetails = 9;
+  ShippingDetails shippingDetails = 10;
+  Address billingAddress = 11;
+  OrderSummary orderSummary = 12;
+  LoyaltyDetails loyaltyDetails = 13;
+  ValidationResults validationResults = 14;
+  StockUpdates stockUpdates = 15;
+}
+
+message OrderProduct {
+  string id = 1;
+  string sku = 2;
+  string name = 3;
+  string brand = 4;
+  double price = 5;
+  double discountApplied = 6;
+  optional string promotionCode = 7;
+  string status = 8;
+  bool available = 9;
+  string imageUrl = 10;
+  string createdAt = 11;
+  string categoryId = 12;
+  string description = 13;
+  int32 stockQuantity = 14;
+  string warehouseLocation = 15;
+  ProductAttributes attributes = 16;
+  int32 quantityOrdered = 17;
+  string fulfillmentType = 18;
+  optional string pickupLocationId = 19;
+  ProductCustomization customization = 20;
+}
+
+message PaymentDetails {
+  string paymentId = 1;
+  string transactionId = 2;
+  string status = 3;
+  double amount = 4;
+  string currency = 5;
+  PaymentMethodInfo paymentMethod = 6;
+  ProcessorResponse processorResponse = 7;
+  RiskAssessment riskAssessment = 8;
+}
+
+message PaymentMethodInfo {
+  string paymentMethodId = 1;
+  string type = 2;
+  string lastFour = 3;
+  string brand = 4;
+  string expiryDate = 5;
+}
+
+message ProcessorResponse {
+  string processor = 1;
+  string status = 2;
+  string responseCode = 3;
+  string authorizationCode = 4;
+  AvsResult avsResult = 5;
+  string cvvResult = 6;
+}
+
+message AvsResult {
+  string status = 1;
+  bool streetMatch = 2;
+  bool postalCodeMatch = 3;
+}
+
+message RiskAssessment {
+  double riskScore = 1;
+  string status = 2;
+  repeated string flags = 3;
+}
+
+message ShippingDetails {
+  string addressId = 1;
+  string addressType = 2;
+  string street = 3;
+  string city = 4;
+  string state = 5;
+  string country = 6;
+  string postalCode = 7;
+  string deliveryInstructions = 8;
+  string estimatedDeliveryDate = 9;
+  string shippingMethod = 10;
+  double shippingCost = 11;
+}
+
+message OrderSummary {
+  double subtotal = 1;
+  double tax = 2;
+  double shippingCost = 3;
+  double discount = 4;
+  double totalAmount = 5;
+  string currency = 6;
+}
+
+message LoyaltyDetails {
+  int32 pointsEarned = 1;
+  int32 pointsBalance = 2;
+  string memberId = 3;
+  string tier = 4;
+}
+
+message ValidationResults {
+  StockAvailability stockAvailability = 1;
+  PaymentValidation paymentValidation = 2;
+}
+
+message StockAvailability {
+  string status = 1;
+  repeated StockAvailabilityDetail details = 2;
+}
+
+message StockAvailabilityDetail {
+  string productId = 1;
+  string sku = 2;
+  bool available = 3;
+  int32 quantityAvailable = 4;
+}
+
+message PaymentValidation {
+  string status = 1;
+  string message = 2;
+  double riskScore = 3;
+}
+
+message StockUpdates {
+  string status = 1;
+  repeated StockUpdateDetail details = 2;
+}
+
+message StockUpdateDetail {
+  string productId = 1;
+  string sku = 2;
+  int32 quantityDecremented = 3;
+  int32 newStockLevel = 4;
+}
+
+message Metadata {
+  string requestId = 1;
+  string correlationId = 2;
+  string environment = 3;
+  string region = 4;
+  string apiVersion = 5;
+  int32 processingTimeMs = 6;
+  bool cacheHit = 7;
+  string dataSource = 8;
+  repeated NotificationSent notificationsSent = 9;
+  AuditInfo audit = 10;
+}
+
+message NotificationSent {
+  string type = 1;
+  string recipient = 2;
+  string status = 3;
+  string notificationId = 4;
+}
+
+message AuditInfo {
+  string orderId = 1;
+  string initiatedBy = 2;
+  string initiatorId = 3;
+  string operationReference = 4;
+  string timestamp = 5;
+}
+
+
+

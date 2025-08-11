@@ -1,0 +1,30 @@
+{
+    "Label": "NetworkRxBytes",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T14:05:00+00:00",
+            "Maximum": 36135.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T14:04:00+00:00",
+            "Maximum": 17634.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T14:08:00+00:00",
+            "Maximum": 36329.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T14:07:00+00:00",
+            "Maximum": 35945.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T14:06:00+00:00",
+            "Maximum": 36475.0,
+            "Unit": "Bytes/Second"
+        }
+    ]
+}

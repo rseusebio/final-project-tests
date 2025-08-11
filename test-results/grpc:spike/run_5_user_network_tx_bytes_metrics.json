@@ -1,0 +1,15 @@
+{
+    "Label": "NetworkTxBytes",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T16:05:00+00:00",
+            "Maximum": 41718.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:04:00+00:00",
+            "Maximum": 2918.0,
+            "Unit": "Bytes/Second"
+        }
+    ]
+}

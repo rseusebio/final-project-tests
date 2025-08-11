@@ -1,0 +1,75 @@
+{
+    "Label": "TaskCpuUtilization",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T11:48:00+00:00",
+            "Maximum": 3.695997497222076,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:57:00+00:00",
+            "Maximum": 0.08563291157285371,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:49:00+00:00",
+            "Maximum": 5.597887384394804,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:58:00+00:00",
+            "Maximum": 0.062427774770185344,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:50:00+00:00",
+            "Maximum": 1.9236697702823828,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:51:00+00:00",
+            "Maximum": 4.884152349084616,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:52:00+00:00",
+            "Maximum": 2.038970618508756,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:53:00+00:00",
+            "Maximum": 3.194001988818248,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:45:00+00:00",
+            "Maximum": 0.05870573827996849,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:54:00+00:00",
+            "Maximum": 3.0670928056351836,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:55:00+00:00",
+            "Maximum": 1.536781000594298,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:46:00+00:00",
+            "Maximum": 0.2051563399533431,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:47:00+00:00",
+            "Maximum": 0.06492309994064271,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T11:56:00+00:00",
+            "Maximum": 4.502911187708379,
+            "Unit": "Percent"
+        }
+    ]
+}

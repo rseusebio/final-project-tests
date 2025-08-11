@@ -1,0 +1,27 @@
+{
+  "name": "final-project-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "rest:smoke": "k6 run ./src/rest-script.ts --env TEST_TYPE=smoke",
+    "rest:average_load": "k6 run --env TEST_TYPE=average_load ./src/rest-script.ts",
+    "rest:high_load": "k6 run --env TEST_TYPE=high_load ./src/rest-script.ts",
+    "rest:spike": "k6 run --env TEST_TYPE=spike ./src/rest-script.ts",
+    "rest:breakpoint": "k6 run --env TEST_TYPE=breakpoint ./src/rest-script.ts",
+    "grpc:smoke": "k6 run --env TEST_TYPE=smoke ./src/grpc-script.ts",
+    "grpc:average_load": "k6 run --env TEST_TYPE=average_load ./src/grpc-script.ts",
+    "grpc:high_load": "k6 run --env TEST_TYPE=high_load ./src/grpc-script.ts",
+    "grpc:spike": "k6 run --env TEST_TYPE=spike ./src/grpc-script.ts",
+    "grpc:breakpoint": "k6 run --env TEST_TYPE=breakpoint ./src/grpc-script.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "k6 load testing scripts for different scenarios (HTTP and gRPC)",
+  "devDependencies": {
+    "@types/k6": "^1.0.2",
+    "@types/node": "^24.0.13"
+  },
+  "dependencies": {
+    "k6": "^0.0.0"
+  }
+}

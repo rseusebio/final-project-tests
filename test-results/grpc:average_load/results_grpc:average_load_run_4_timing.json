@@ -1,0 +1,9 @@
+{
+    "test_name": "grpc:average_load",
+    "run_number": 4,
+    "start_time": "2025-08-09 10:56:48",
+    "end_time": "2025-08-09 11:02:50",
+    "start_timestamp": 1754747808,
+    "end_timestamp": 1754748170,
+    "duration_seconds": 362
+}

@@ -1,0 +1,65 @@
+{
+    "Label": "NetworkRxBytes",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T16:58:00+00:00",
+            "Maximum": 875662.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:57:00+00:00",
+            "Maximum": 883953.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:56:00+00:00",
+            "Maximum": 835419.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:55:00+00:00",
+            "Maximum": 525948.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:54:00+00:00",
+            "Maximum": 266744.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:53:00+00:00",
+            "Maximum": 125736.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T17:02:00+00:00",
+            "Maximum": 840238.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T17:01:00+00:00",
+            "Maximum": 844947.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:52:00+00:00",
+            "Maximum": 42428.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:51:00+00:00",
+            "Maximum": 1616.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T17:00:00+00:00",
+            "Maximum": 841768.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T16:59:00+00:00",
+            "Maximum": 854148.0,
+            "Unit": "Bytes/Second"
+        }
+    ]
+}

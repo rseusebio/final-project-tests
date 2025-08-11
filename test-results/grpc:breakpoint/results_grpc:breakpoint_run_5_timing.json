@@ -1,0 +1,9 @@
+{
+    "test_name": "grpc:breakpoint",
+    "run_number": 5,
+    "start_time": "2025-08-09 15:17:16",
+    "end_time": "2025-08-09 15:29:47",
+    "start_timestamp": 1754763436,
+    "end_timestamp": 1754764187,
+    "duration_seconds": 751
+}

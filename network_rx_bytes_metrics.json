@@ -1,0 +1,75 @@
+{
+    "Label": "NetworkRxBytes",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T11:57:00+00:00",
+            "Maximum": 3448.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:48:00+00:00",
+            "Maximum": 12476.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:56:00+00:00",
+            "Maximum": 15871.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:47:00+00:00",
+            "Maximum": 16.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:46:00+00:00",
+            "Maximum": 483.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:55:00+00:00",
+            "Maximum": 9402.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:45:00+00:00",
+            "Maximum": 1.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:54:00+00:00",
+            "Maximum": 10326.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:53:00+00:00",
+            "Maximum": 14548.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:52:00+00:00",
+            "Maximum": 5622.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:51:00+00:00",
+            "Maximum": 18541.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:50:00+00:00",
+            "Maximum": 8676.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:49:00+00:00",
+            "Maximum": 18857.0,
+            "Unit": "Bytes/Second"
+        },
+        {
+            "Timestamp": "2025-08-09T11:58:00+00:00",
+            "Maximum": 2.0,
+            "Unit": "Bytes/Second"
+        }
+    ]
+}

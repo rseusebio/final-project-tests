@@ -1,0 +1,65 @@
+{
+    "Label": "TaskMemoryUtilization",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T17:51:00+00:00",
+            "Maximum": 16.015625,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:52:00+00:00",
+            "Maximum": 16.40625,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:53:00+00:00",
+            "Maximum": 16.6015625,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:54:00+00:00",
+            "Maximum": 16.9921875,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:55:00+00:00",
+            "Maximum": 16.796875,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:56:00+00:00",
+            "Maximum": 16.9921875,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:57:00+00:00",
+            "Maximum": 16.796875,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:48:00+00:00",
+            "Maximum": 13.4765625,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:49:00+00:00",
+            "Maximum": 13.4765625,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:58:00+00:00",
+            "Maximum": 16.796875,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:50:00+00:00",
+            "Maximum": 14.84375,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T17:59:00+00:00",
+            "Maximum": 16.796875,
+            "Unit": "Percent"
+        }
+    ]
+}

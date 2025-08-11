@@ -1,0 +1,9 @@
+{
+    "test_name": "grpc:spike",
+    "run_number": 1,
+    "start_time": "2025-08-09 12:47:32",
+    "end_time": "2025-08-09 12:50:36",
+    "start_timestamp": 1754754452,
+    "end_timestamp": 1754754636,
+    "duration_seconds": 184
+}

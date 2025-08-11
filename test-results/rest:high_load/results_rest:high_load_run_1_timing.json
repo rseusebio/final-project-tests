@@ -1,0 +1,9 @@
+{
+    "test_name": "rest:high_load",
+    "run_number": 1,
+    "start_time": "2025-08-09 11:11:10",
+    "end_time": "2025-08-09 11:17:13",
+    "start_timestamp": 1754748670,
+    "end_timestamp": 1754749033,
+    "duration_seconds": 363
+}

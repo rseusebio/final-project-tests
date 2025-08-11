@@ -1,0 +1,9 @@
+{
+    "test_name": "rest:breakpoint",
+    "run_number": 5,
+    "start_time": "2025-08-09 14:05:44",
+    "end_time": "2025-08-09 14:17:59",
+    "start_timestamp": 1754759144,
+    "end_timestamp": 1754759879,
+    "duration_seconds": 735
+}

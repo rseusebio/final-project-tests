@@ -1,0 +1,30 @@
+{
+    "Label": "TaskMemoryUtilization",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T13:57:00+00:00",
+            "Maximum": 14.6484375,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T13:58:00+00:00",
+            "Maximum": 15.8203125,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T13:59:00+00:00",
+            "Maximum": 15.8203125,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T14:00:00+00:00",
+            "Maximum": 15.8203125,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T13:56:00+00:00",
+            "Maximum": 14.2578125,
+            "Unit": "Percent"
+        }
+    ]
+}

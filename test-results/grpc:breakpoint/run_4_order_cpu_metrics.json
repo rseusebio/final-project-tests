@@ -1,0 +1,70 @@
+{
+    "Label": "TaskCpuUtilization",
+    "Datapoints": [
+        {
+            "Timestamp": "2025-08-09T18:09:00+00:00",
+            "Maximum": 99.29344107210638,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:10:00+00:00",
+            "Maximum": 97.70006340742111,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:02:00+00:00",
+            "Maximum": 0.06554706107514599,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:11:00+00:00",
+            "Maximum": 99.21416849146286,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:12:00+00:00",
+            "Maximum": 96.06065994873644,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:03:00+00:00",
+            "Maximum": 6.473506209750969,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:13:00+00:00",
+            "Maximum": 96.71145044143002,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:04:00+00:00",
+            "Maximum": 21.54552176222205,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:05:00+00:00",
+            "Maximum": 41.90959506481886,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:14:00+00:00",
+            "Maximum": 85.0534612586101,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:06:00+00:00",
+            "Maximum": 67.39525083079934,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:07:00+00:00",
+            "Maximum": 93.89491085211435,
+            "Unit": "Percent"
+        },
+        {
+            "Timestamp": "2025-08-09T18:08:00+00:00",
+            "Maximum": 99.33639538039763,
+            "Unit": "Percent"
+        }
+    ]
+}

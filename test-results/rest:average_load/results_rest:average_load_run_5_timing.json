@@ -1,0 +1,9 @@
+{
+    "test_name": "rest:average_load",
+    "run_number": 5,
+    "start_time": "2025-08-09 10:28:15",
+    "end_time": "2025-08-09 10:34:18",
+    "start_timestamp": 1754746095,
+    "end_timestamp": 1754746458,
+    "duration_seconds": 363
+}

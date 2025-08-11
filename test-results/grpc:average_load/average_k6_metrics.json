@@ -1,0 +1,10 @@
+{
+  "data_sent_count": 9384993.6,
+  "data_sent_rate": 25958.682583908754,
+  "data_received_count": 12130267.4,
+  "data_received_rate": 33552.12611910058,
+  "vus_max": 50.0,
+  "success_rate_rate": 1.0,
+  "success_rate_passes": 12817.2,
+  "success_rate_fails": 0.0
+}
