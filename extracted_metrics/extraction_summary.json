@@ -1,0 +1,32 @@
+{
+  "extraction_summary": {
+    "total_test_directories": 8,
+    "test_directories": [
+      "grpc:average_load",
+      "grpc:breakpoint",
+      "grpc:high_load",
+      "grpc:spike",
+      "rest:average_load",
+      "rest:breakpoint",
+      "rest:high_load",
+      "rest:spike"
+    ],
+    "output_location": "extracted_metrics",
+    "extraction_scripts": [
+      "extract_k6_metrics.py",
+      "extract_cloudwatch_logs.py",
+      "extract_cloudwatch_metrics.py"
+    ]
+  },
+  "results_structure": {
+    "description": "Each test directory contains extracted metrics from all three scripts",
+    "files_per_test_directory": {
+      "k6_metrics.json": "k6 performance test results",
+      "cloudwatch_logs_metrics.json": "CloudWatch logs latency metrics",
+      "order/cloudwatch_metrics.json": "Order service infrastructure metrics",
+      "product/cloudwatch_metrics.json": "Product service infrastructure metrics",
+      "user/cloudwatch_metrics.json": "User service infrastructure metrics",
+      "payment/cloudwatch_metrics.json": "Payment service infrastructure metrics"
+    }
+  }
+}

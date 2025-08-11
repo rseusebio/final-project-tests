@@ -1,0 +1,22 @@
+{
+  "cpu_utilization": {
+    "average_maximum": 20.285976256284236,
+    "total_files_processed": 5,
+    "unit": "Percent"
+  },
+  "memory_utilization": {
+    "average_maximum": 13.19921875,
+    "total_files_processed": 5,
+    "unit": "Percent"
+  },
+  "network_rx_bytes": {
+    "average_maximum": 80009.1,
+    "total_files_processed": 5,
+    "unit": "Bytes"
+  },
+  "network_tx_bytes": {
+    "average_maximum": 108763.58,
+    "total_files_processed": 5,
+    "unit": "Bytes"
+  }
+}

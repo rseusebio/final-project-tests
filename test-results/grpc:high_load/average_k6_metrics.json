@@ -1,0 +1,19 @@
+{
+  "data_sent_count": 29983309.2,
+  "data_sent_rate": 82801.03841172552,
+  "data_received_count": 38749869.8,
+  "data_received_rate": 107010.45617234078,
+  "request_duration_avg": 1910.0619387044949,
+  "request_duration_min": 1052.7779918,
+  "request_duration_max": 3762.6756417999995,
+  "request_duration_median": 1893.7439543,
+  "request_duration_p90": 2313.7088298200006,
+  "request_duration_p95": 2452.20793864,
+  "request_duration_p99": 2746.4819609799997,
+  "vus_max": 200.0,
+  "throughput_requests_per_second": 56.527140190445934,
+  "throughput_total_requests": 20469.2,
+  "success_rate_rate": 1.0,
+  "success_rate_passes": 40938.4,
+  "success_rate_fails": 0.0
+}
