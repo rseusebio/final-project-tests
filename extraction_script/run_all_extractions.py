@@ -96,14 +96,25 @@ def run_cloudwatch_logs_extraction(test_dir: str, base_path: str, output_base: s
         if result.returncode == 0:
             print(f"  ✅ CloudWatch logs extraction completed successfully")
             
-            # Copy the output file to our output directory
+            # Copy the combined output file to our output directory
             logs_output = os.path.join(input_path, "average_cloudwatch_logs_metrics.json")
             if os.path.exists(logs_output):
                 dest_path = os.path.join(output_path, "cloudwatch_logs_metrics.json")
                 shutil.copy2(logs_output, dest_path)
-                print(f"  📁 CloudWatch logs metrics saved to: {dest_path}")
-            else:
-                print(f"  ⚠️  CloudWatch logs output file not found")
+                print(f"  📁 Combined CloudWatch logs metrics saved to: {dest_path}")
+            
+            # Copy per-service CloudWatch logs metrics files
+            services = ['order', 'product', 'user', 'payment']
+            for service in services:
+                service_input = os.path.join(input_path, service)
+                service_output = os.path.join(output_path, service)
+                
+                if os.path.exists(service_input):
+                    service_logs_file = os.path.join(service_input, "cloudwatch_logs_metrics.json")
+                    if os.path.exists(service_logs_file):
+                        dest_path = os.path.join(service_output, "cloudwatch_logs_metrics.json")
+                        shutil.copy2(service_logs_file, dest_path)
+                        print(f"    📁 {service} service logs metrics saved to: {dest_path}")
         else:
             print(f"  ❌ CloudWatch logs extraction failed:")
             print(f"     {result.stderr}")

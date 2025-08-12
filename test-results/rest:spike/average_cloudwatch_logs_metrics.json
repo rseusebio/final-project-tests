@@ -1,0 +1,90 @@
+{
+  "order": {
+    "deserialize": {
+      "total_requests": 6197.0,
+      "latency_min": 0.09539940357208251,
+      "latency_max": 123.48211320638657,
+      "latency_avg": 0.8706993286140428,
+      "latency_median": 0.13987959921360016,
+      "latency_p90": 0.2462040066719055,
+      "latency_p95": 0.3513743937015533,
+      "latency_p99": 11.91563019156456
+    },
+    "serialize": {
+      "total_requests": 6197.0,
+      "latency_min": 0.15586019158363343,
+      "latency_max": 155.9132115960121,
+      "latency_avg": 1.0443032623375323,
+      "latency_median": 0.22160739898681642,
+      "latency_p90": 0.3281727969646454,
+      "latency_p95": 0.3712286055088043,
+      "latency_p99": 32.933737200498584
+    }
+  },
+  "product": {
+    "deserialize": {
+      "total_requests": 12394.0,
+      "latency_min": 0.07005817890167236,
+      "latency_max": 89.16238679885865,
+      "latency_avg": 0.2925662614635257,
+      "latency_median": 0.12517892122268676,
+      "latency_p90": 0.22924978733062745,
+      "latency_p95": 0.2898345708847046,
+      "latency_p99": 1.2802170276641847
+    },
+    "serialize": {
+      "total_requests": 12394.0,
+      "latency_min": 0.10685160160064697,
+      "latency_max": 94.8231339931488,
+      "latency_avg": 0.45747059434040016,
+      "latency_median": 0.24663521051406861,
+      "latency_p90": 0.4302947759628296,
+      "latency_p95": 0.5343093872070312,
+      "latency_p99": 2.125811982154846
+    }
+  },
+  "user": {
+    "deserialize": {
+      "total_requests": 6197.2,
+      "latency_min": 0.006596016883850098,
+      "latency_max": 12.045245790481568,
+      "latency_avg": 0.014178177227123931,
+      "latency_median": 0.008780217170715332,
+      "latency_p90": 0.018180441856384278,
+      "latency_p95": 0.021254825592041015,
+      "latency_p99": 0.040003609657287595
+    },
+    "serialize": {
+      "total_requests": 6197.0,
+      "latency_min": 0.133787202835083,
+      "latency_max": 91.49824397563934,
+      "latency_avg": 0.3345830557678183,
+      "latency_median": 0.2152852773666382,
+      "latency_p90": 0.3858479976654053,
+      "latency_p95": 0.4189974069595337,
+      "latency_p99": 0.6585763931274414
+    }
+  },
+  "payment": {
+    "deserialize": {
+      "total_requests": 12394.0,
+      "latency_min": 0.06091098785400391,
+      "latency_max": 85.58301818370819,
+      "latency_avg": 0.23085936177406802,
+      "latency_median": 0.10455690622329712,
+      "latency_p90": 0.18231101036071778,
+      "latency_p95": 0.21528863906860352,
+      "latency_p99": 0.48156061172485354
+    },
+    "serialize": {
+      "total_requests": 12394.0,
+      "latency_min": 0.08415615558624268,
+      "latency_max": 91.8178322315216,
+      "latency_avg": 0.29635181100571456,
+      "latency_median": 0.1502263903617859,
+      "latency_p90": 0.3208336114883423,
+      "latency_p95": 0.3684487819671631,
+      "latency_p99": 0.9101159811019898
+    }
+  }
+}

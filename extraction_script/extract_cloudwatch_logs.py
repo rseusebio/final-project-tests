@@ -61,14 +61,14 @@ def extract_cloudwatch_logs_metrics(json_file_path: str) -> List[Dict[str, Any]]
                         deserialize_latencies.append(latency)
                 except ValueError:
                     print(f"Warning: Invalid latency value: {latency_str}")
-                    sys.exit(1)  # Skip invalid latency values
+                    continue  # Skip invalid latency values
         except Exception:
             print(f"Warning: Malformed message: {message}")
-            sys.exit(1)  # Skip malformed messages            
+            continue  # Skip malformed messages            
     
     if not serialize_latencies and not deserialize_latencies:
         print(f"Warning: No valid latency data found in '{json_file_path}'")
-        sys.exit(1)
+        return []
     
     metrics = {}
     
@@ -162,56 +162,89 @@ def calculate_average_metrics(all_metrics: List[Dict[str, Any]]) -> Dict[str, An
 
 def process_cloudwatch_logs(folder_path: str, output_file: str):
     """
-    Process all CloudWatch logs files in a folder
+    Process all CloudWatch logs files in service subdirectories and save per-service results
     
     Args:
-        folder_path: Path to the folder containing CloudWatch logs files
+        folder_path: Path to the folder containing service subdirectories
         output_file: Name of the output file for average metrics
     """
     if not os.path.isdir(folder_path):
         print(f"Error: '{folder_path}' is not a valid directory")
         sys.exit(1)
     
-    # Find all files matching the pattern run_{number}_{service}_cloudwatch_logs.json
-    pattern = os.path.join(folder_path, "run_*_*_cloudwatch_logs.json")
-    matching_files = glob.glob(pattern)
+    # Look for service subdirectories
+    services = ['order', 'product', 'user', 'payment']
+    all_service_metrics = {}
     
-    if not matching_files:
-        print(f"No files found matching pattern 'run_*_*_cloudwatch_logs.json' in {folder_path}")
-        return
-    
-    print(f"Found {len(matching_files)} CloudWatch logs files to process:")
-    
-    # Process each file
-    all_deserialize_metrics = []
-    all_serialize_metrics = []
-    for file_path in matching_files:
-        file_name = os.path.basename(file_path)
-        print(f"\nProcessing: {file_name}")
-        
-        # Extract metrics
-        [deserialize_metrics, serialize_metrics] = extract_cloudwatch_logs_metrics(file_path)
-        
-        if not deserialize_metrics or not serialize_metrics:
-            print(f"Failed to extract metrics from {file_name}")
+    for service in services:
+        service_dir = os.path.join(folder_path, service)
+        if not os.path.exists(service_dir):
             continue
-
-        all_deserialize_metrics.append(deserialize_metrics)
-        all_serialize_metrics.append(serialize_metrics)
-    
-    # Save combined metrics
-    if len(all_deserialize_metrics) <= 0 or len(all_serialize_metrics) <= 0:
-        print("No CloudWatch logs metrics extracted")
-        return
+            
+        print(f"\nProcessing {service} service...")
         
-    # Calculate and save average metrics
-    average_deserialize_metrics = calculate_average_metrics(all_deserialize_metrics)
-    average_serialize_metrics = calculate_average_metrics(all_serialize_metrics)
+        # Find all CloudWatch logs files for this service
+        pattern = os.path.join(service_dir, f"run_*_{service}_cloudwatch_logs.json")
+        matching_files = glob.glob(pattern)
+        
+        if not matching_files:
+            print(f"  No CloudWatch logs files found for {service} service")
+            continue
+            
+        print(f"  Found {len(matching_files)} CloudWatch logs files for {service} service:")
+        
+        # Process each file for this service
+        all_deserialize_metrics = []
+        all_serialize_metrics = []
+        
+        for file_path in matching_files:
+            file_name = os.path.basename(file_path)
+            print(f"    Processing: {file_name}")
+            
+            # Extract metrics
+            try:
+                [deserialize_metrics, serialize_metrics] = extract_cloudwatch_logs_metrics(file_path)
+                
+                if deserialize_metrics and serialize_metrics:
+                    all_deserialize_metrics.append(deserialize_metrics)
+                    all_serialize_metrics.append(serialize_metrics)
+                else:
+                    print(f"      Failed to extract metrics from {file_name}")
+            except Exception as e:
+                print(f"      Error processing {file_name}: {e}")
+                continue
+        
+        # Calculate averages for this service
+        if all_deserialize_metrics and all_serialize_metrics:
+            average_deserialize_metrics = calculate_average_metrics(all_deserialize_metrics)
+            average_serialize_metrics = calculate_average_metrics(all_serialize_metrics)
+            
+            all_service_metrics[service] = {
+                'deserialize': average_deserialize_metrics,
+                'serialize': average_serialize_metrics
+            }
+            
+            # Save per-service metrics
+            service_output = os.path.join(service_dir, "cloudwatch_logs_metrics.json")
+            save_metrics_to_file(all_service_metrics[service], service_output)
+            print(f"  📁 {service} service metrics saved to: {service_output}")
+        else:
+            print(f"  ⚠️  No valid metrics extracted for {service} service")
     
-    return [
-        average_deserialize_metrics,
-        average_serialize_metrics
-    ]
+    # Save combined metrics for all services
+    if all_service_metrics:
+        combined_output = os.path.join(folder_path, "average_cloudwatch_logs_metrics.json")
+        save_metrics_to_file(all_service_metrics, combined_output)
+        print(f"\n📁 Combined metrics for all services saved to: {combined_output}")
+        
+        total_files = sum(len(glob.glob(os.path.join(folder_path, service, f"run_*_{service}_cloudwatch_logs.json"))) 
+                         for service in services if os.path.exists(os.path.join(folder_path, service)))
+        print(f"Total CloudWatch logs files processed: {total_files}")
+        
+        return all_service_metrics
+    else:
+        print("No CloudWatch logs metrics extracted from any service")
+        return {}
 def main():
     """Main function to process command line arguments and extract metrics"""
     if len(sys.argv) < 2:
@@ -227,26 +260,8 @@ def main():
     # Process CloudWatch logs
     result = process_cloudwatch_logs(folder_path, "average_cloudwatch_logs_metrics.json")
 
-    if result and len(result) == 2:
-        average_deserialize_metrics, average_serialize_metrics = result
-        
-        if average_deserialize_metrics and average_serialize_metrics:
-            # Combine both metrics into a single structure
-            combined_metrics = {
-                'deserialize': average_deserialize_metrics,
-                'serialize': average_serialize_metrics
-            }
-            
-            average_output = os.path.join(folder_path, "average_cloudwatch_logs_metrics.json")
-            save_metrics_to_file(combined_metrics, average_output)
-            print(f"Average CloudWatch logs metrics saved to: {average_output}")
-            
-            # Count processed files for summary
-            pattern = os.path.join(folder_path, "run_*_*_cloudwatch_logs.json")
-            matching_files = glob.glob(pattern)
-            print(f"Processed {len(matching_files)} CloudWatch logs files successfully")
-        else:
-            print("No CloudWatch logs metrics extracted")
+    if result:
+        print("CloudWatch logs extraction completed successfully")
     else:
         print("No CloudWatch logs metrics extracted")
 

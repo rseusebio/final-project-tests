@@ -1,0 +1,22 @@
+{
+  "deserialize": {
+    "total_requests": 6874.2,
+    "latency_min": 0.062072014808654784,
+    "latency_max": 115.76592820286751,
+    "latency_avg": 0.432459098277457,
+    "latency_median": 0.10701150298118592,
+    "latency_p90": 0.19299678802490233,
+    "latency_p95": 0.23771379590034486,
+    "latency_p99": 0.5729203999042511
+  },
+  "serialize": {
+    "total_requests": 6867.6,
+    "latency_min": 0.06845739483833313,
+    "latency_max": 99.69463379979133,
+    "latency_avg": 0.5473921023828336,
+    "latency_median": 0.11052180230617523,
+    "latency_p90": 0.1847234010696411,
+    "latency_p95": 0.2248929977416992,
+    "latency_p99": 1.867397391796112
+  }
+}
